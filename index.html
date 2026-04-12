@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Analysis of Global Mortality Rates and Healthcare Performance</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <h1> An Analysis of Global Mortality Rates and Healthcare Performance</h1>
+
+    <h3>Introduction</h3>
+
+    <p>The topic that is being focused on pertains to how potential healthcare gaps,
+         in different countries, can be addressed. The analysis of mortality rates across
+          different countries can allow for comparison on healthcare and cause of death,
+           which informs public health planning, healthcare system performance, and public policy decisions. 
+         </p>
+
+    <p>This is important as the analysis can assist in revealing interconnected factors related 
+        to healthcare, such as how structural issues, economy, and sustainability affect
+        mortality rates. With this information, recommendations can be made to determine how 
+        global healthcare can be improved.</p>
+
+    <p>For information that discusses cross-country mortality patterns due to age, sex, and geographic location click
+        the first link. This information is discussed over 31 years to gain perspective on how time affects global mortality rates in the
+        <a href="https://doi.org/10.1016/s0140-6736(24)00367-2 ">Global Burden of Disease Study 2021</a> or with information relating 
+        to disease specific mortality trends across various countries. The source considers various factors such as population structures 
+        in the country, the GDP per capita, as well as the distribution of age ranges in each country using 
+         <a href="https://arxiv.org/abs/2501.11514 ">A Metric Bridging Population Pyramids with Global Disease Mortality</a>.</p>
+
+    <h3>Introduction to the data</h3>
+
+    <p>The data that is being utilized for this project has been sourced from Kaggle and is titled
+         <a href="https://doi.org/10.1016/s0140-6736(24)00367-2 ">Global Health, Mortality & Disease Trends Since 2000</a>
+          Compiled from the World Bank Open Data repository, this dataset provides a wide range of global, 
+          country-level healthcare indicators from the years 2000 to 2023. Data is sourced from many avenues including household surveys 
+          like the Demographic and Health Survey (DHS), frameworks from the World Health Organization, and population censuses. The raw 
+          dataset contains 26 columns which describe years and 23,871 rows which describe a wide range of healthcare indicators 
+          (immunization rates, mortality rates, life expectancy, population dynamics) each split by country. 
+
+    </p>
+
+    <p>This dataset is suitable for an analysis of global mortality rates as it not only provides direct mortality metrics, but it also 
+        provides several other healthcare system and population dynamic statistics which may allow for deeper investigation into what 
+        causes differences in mortality rates per country and where there may be room for improvement. Furthermore, the expansive 
+        timeline of this dataset will allow for an understanding of long-term trends and changes that can not only reveal long-standing 
+        healthcare characteristics per country but also demonstrate how different healthcare systems reacted to global healthcare shocks 
+        and crises (like the COVID-19 pandemic). That said, this dataset only contains data up until the year 2023 which means more 
+        up-to-date metrics and developments may not be accounted for in the trends found. However, the long-term trends and health 
+        indicators that this project is centered on should remain largely useful as these are characteristics that change slowly over time.
+     </p>
+
+    <p> (ELYSIA) variable table here based on professors code:</p> 
+
+    <p> (ELYSIA) introduce map:</p> 
+
+    <div class = 'center'>
+                <iframe src="choropleth_map.html" width="80%" height="400px" frameborder="0"></iframe>
+    </div>
+
+    <h3>Global Health Resources Vs. Mortality Comparison</h3>
+
+    <div class = 'container'>
+            <iframe src="image.png" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+
+    <h3>Specific Health Resources Vs. Mortality Comparison</h3>
+
+    <p>The second visualization is an Altair scatter plot that compares the relationship between healthcare resources and 
+        mortality rates across different countries. The x-axis represents the number of healthcare resources (such as hospital beds, doctors, 
+        or healthcare expenditure) while the y-axis represents the mortality rate (such as infant mortality rate or overall mortality rate). 
+        Each point on the scatter plot represents a country, and the color of the points can indicate different regions or income levels. 
+        This visualization allows us to see if there is a correlation between healthcare resources and mortality rates, and to identify any 
+        outliers or trends in the data.
+    </p>
+         <div class = 'container'>
+            <iframe src="alt_scatterplot.html" width="100%" height="400px" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> (ELYSIA) write an analysis on what the data represents</p>
+        </div>>
+
+    <h3>Health Expenditures Over Time by Country</h3>
+
+    <p>The third visualization is a line chart that shows the trend of health expenditures over time for different countries. 
+        The x-axis represents the years, while the y-axis represents the amount of health expenditure (either in absolute terms or
+         as a percentage of GDP). Each line on the chart represents a different country, and the color of the lines can indicate different
+        regions or income levels. This visualization allows us to see how health expenditures have changed over time across different 
+        countries, and to identify any patterns or trends in the data.
+    </p>
+
+        <div class = 'container'>
+            <iframe src="new_health_plot.html" width="800" height="500" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> (ELYSIA) write an analysis on what the data represents</p>
+        </div>>
+    
+    <h3>Health Care Spending and Life Expectancy Correlation</h3>
+
+    <p>The fourth visualization is a D3 scatter plot that explores the correlation between healthcare spending and life expectancy across 
+        different countries. The x-axis represents healthcare spending per capita, while the y-axis represents life expectancy at birth.
+         Each point on the scatter plot represents a country, and the size of the points can indicate population size or another relevant 
+         metric. This visualization allows us to examine whether higher healthcare spending is associated with longer life 
+         expectancy, and to identify any outliers or patterns in the data.
+    </p>
+
+        <div class = 'container'>
+            <div class = 'image'>
+                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
+                <iframe src="scatter.html" width="100%" height="400px" frameborder="0"></iframe>
+            </div>
+            <div class = 'text'>
+                <p> (ELYSIA) write an analysis on what the data represents
+                </p>
+            </div>            
+        </div>
+
+
+        <h3>Summary and additional work</h3>
+
+        <p>add something here</p>
+
+</body>
+</html>
