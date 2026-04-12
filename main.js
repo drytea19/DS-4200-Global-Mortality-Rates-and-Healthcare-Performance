@@ -62,7 +62,7 @@ d3.csv("D3_data.csv").then(function(data) {
   svg.append("text")
      .attr("x", width / 2)
      .attr("y", height - 10)
-     .text("Healthcare Expenditure per Capita (log scale)")
+     .text("Healthcare Expenditure (% of GDP, log scale)")
      .style("text-anchor", "middle");
 
   svg.append("text")
