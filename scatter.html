@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>D3 Scatterplot with Slider</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+    }
+    .tooltip {
+      position: absolute;
+      background: white;
+      padding: 5px;
+      border: 1px solid black;
+      pointer-events: none;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Healthcare Spending vs Life Expectancy</h2>
+
+<input type="range" min="2000" max="2022" step="1" value="2021" id="yearSlider">
+<p>Year: <span id="yearLabel">2021</span></p>
+
+<svg width="1000" height="1000"></svg>
+
+<div class="tooltip"></div>
+
+<script src='main.js'></script>
