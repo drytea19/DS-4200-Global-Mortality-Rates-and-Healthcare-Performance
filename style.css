@@ -1,66 +1,98 @@
 body {
     width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px 20px 20px;
-    border: 3px solid black;
-  }
+    margin: 30px auto;
+    padding: 0 30px 30px 30px;
+    background: #1b754e;
+    color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
 
+/* Main content container */
+main, .wrapper {
+    background: #1b754e;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    border-top: 6px solid #1b754e;
+}
+
+/* Title */
 h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 20px 0;
-    color: black;
+    color: #472bc5;
     text-align: center;
-  }
+    font-size: 2.2rem;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
 
+/* Subheadings */
+h2, h3, h4 {
+    color: #f38740;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+}
+
+/* Table */
 .tg {
     border-collapse: collapse;
-    border-spacing: 0;
+    width: 100%;
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .tg td {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    font-family: Arial, sans-serif;
+    border: 1px solid #1b754e;
     font-size: 14px;
-    overflow: hidden;
-    padding: 10px 5px;
-    word-break: normal;
+    padding: 12px 10px;
+    color: #2f3e46;
 }
 
 .tg th {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    overflow: hidden;
-    padding: 10px 5px;
-    word-break: normal;
+    border: 1px solid #1b754e;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 10px;
+    background: #57cc99;
+    color: white;
 }
 
-.tg .tg-0lax {
-    text-align: left;
-    vertical-align: top;
+.tg tr:nth-child(even) td {
+    background-color: #f3fbf5;
 }
 
-.center {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
+/* Image + text */
 .container {
     align-items: center;
-    display: flex;/* Align items vertically in center */
+    display: flex;
+    gap: 24px;
+    background: #3f8f77;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
-.image {
-    flex: 0 0 65%; /* Don't allow the image to grow or shrink */
-    margin-right: 20px; /* Add some space between image and text */
+.image img {
+    width: 100%;
+    border-radius: 12px;
 }
 
 .text {
-    flex: 1; /* Allow text to grow to fill remaining space */
+    flex: 1;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Links */
+a {
+    color: #2f9fb6;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #ffffff;
 }
