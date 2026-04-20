@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>An Analysis of Global Mortality Rates and Healthcare Performance</title>
     <link href="style.css" rel="stylesheet" />
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column; /* stack vertically */
+            align-items: center;
+            gap: 16px;
+        }
+
+        .text {
+            max-width: 700px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     
@@ -128,23 +142,23 @@
         outliers or trends in the data.
     </p>
          <div class = 'container'>
-            <iframe src="alt_scatterplot.html" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
-        <div class = 'text'>
-            <p> This scatter plot compares healthcare resources and mortality rates across different countries. In general, countries with stronger 
+            <iframe src="alt_scatterplot.html" width="800px" height="400px" frameborder="0"></iframe>
+            <div class = 'text'>
+                <p> This scatter plot compares healthcare resources and mortality rates across different countries. In general, countries with stronger 
                 healthcare resources tend to have lower mortality rates, although the pattern is not perfect and there are still some outliers. 
                 This suggests that healthcare access and investment are important factors in health outcomes, but they are not the only influence. 
                 Overall, the visualization helps show that differences in healthcare systems may play a major role in explaining differences in 
                 mortality between countries.
-            </p>
+                </p>
 
-            <p>
-                <strong>Takeaway:</strong> Countries with more healthcare resources often have lower mortality rates, but the relationship is not identical.
-            </p>
-            <p> How to interact: Hover over each point to view country level details and compare countries that fall above or below the overall trend
-            </p>
+                <p>
+                    <strong>Takeaway:</strong> Countries with more healthcare resources often have lower mortality rates, but the relationship is not identical.
+             </p>
+            </div>
         </div>
 
+    <p><strong>How to interact: </strong> Hover over each point to view country level details and compare countries that fall above or below the overall trend
+    </p>
     <h3>Health Expenditures Over Time by Country</h3>
 
     <p>The third visualization is a line chart that shows the trend of health expenditures over time for different countries. 
@@ -154,9 +168,8 @@
     </p>
 
         <div class = 'container'>
-            <iframe src="new_health_plot.html" width="800" height="500" frameborder="0"></iframe>
-        </div>
-        <div class = 'text'>
+            <iframe src="new_health_plot.html" width="800px" height="400px" frameborder="0"></iframe>
+            <div class = 'text'>
             <p> This line chart shows how health expenditures change over time for different countries. It makes it easier to compare 
                 long-term spending trends and see which countries steadily increased healthcare investment versus which stayed more stable over time. 
                 Looking at the data this way is useful because it shows that countries do not all follow the same path, and those differences in 
@@ -166,9 +179,12 @@
             <p>
                 <strong>Takeaway:</strong> Health spending changes over time, and long term differences between countries help explain broader differences in health outcomes.
             </p>
-            <p> How to interact: Hover over the lines to compare countries and trace how healthcare spending changes across years. 
-            </p>
+            </div>
         </div>
+    <p> 
+        <strong>How to interact:</strong> Hover over the lines to compare countries and trace how healthcare spending changes across years. 
+    </p>
+        
     
     <h3>Health Care Spending and Life Expectancy Correlation</h3>
 
@@ -182,7 +198,7 @@
         <div class = 'container'>
             <div class = 'image'>
                 <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
-                <iframe src="scatter.html" width="100%" height="400px" frameborder="0"></iframe>
+                <iframe src="scatter.html" width="800px" height="400px" frameborder="0"></iframe>
             </div>
             <div class = 'text'>
                 <p> This scatter plot shows the relationship between healthcare spending per capita and life expectancy across countries. 
@@ -197,7 +213,7 @@
             </div>            
         </div>
 
-    <p>By hovering over each point in this visual, you can see the corresponding country but also the amount of health expenditure spending and 
+    <p><strong>How to interact: </strong>By hovering over each point in this visual, you can see the corresponding country but also the amount of health expenditure spending and 
         life expectancy. There is a slider for the year that can be adjusted too so that you can see how spending/ life expectancy has changed throughout
         time.
     </p>
