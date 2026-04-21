@@ -1,7 +1,8 @@
 body {
-    width: 1000px;
-    margin: 30px auto;
-    padding: 0 30px 30px 30px;
+    width: 100%;
+    max-width: 1300px; 
+    margin: 10px auto;
+    padding: 0 20px 30px 20px; 
     background: #1b754e;
     color: #ffffff;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -183,29 +184,30 @@ h2, h3, h4 {
     background-color: #f3fbf5;
 }
 
-/* Old image + text container */
+/* Container now stacks vertically */
 .container {
-    align-items: center;
     display: flex;
-    gap: 24px;
+    flex-direction: column; /* stack visualization + text */
+    align-items: center;
+    gap: 16px;
     background: #3f8f77;
     padding: 20px;
     border-radius: 12px;
     margin-top: 20px;
 }
-
-.image img {
+iframe, img {
     width: 100%;
-    border-radius: 12px;
+    max-width: 1000px;
 }
 
+/* Text block */
 .text {
-    flex: 1;
+    max-width: 900px;
+    text-align: left;
     line-height: 1.6;
     color: #ffffff;
 }
 
-/* Links */
 a {
     color: #438ab9;
     font-weight: 600;
