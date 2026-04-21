@@ -15,8 +15,8 @@ d3.csv("D3_data.csv").then(function(data) {
   // -----------------------------
   // SETUP
   // -----------------------------
-  let width = 800,
-      height = 500;
+  let width = 1000
+  let height = 400
 
   let margin = {
     top: 40,
@@ -25,9 +25,9 @@ d3.csv("D3_data.csv").then(function(data) {
     right: 40
   };
 
-  let svg = d3.select("svg")
-              .attr("width", width)
-              .attr("height", height);
+ let svg = d3.select("svg")
+  .attr("viewBox", `0 0 ${width} ${height}`)
+  .attr("preserveAspectRatio", "xMidYMid meet");
 
   let tooltip = d3.select(".tooltip");
 

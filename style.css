@@ -128,19 +128,32 @@ h2, h3, h4 {
 }
 
 .viz-chart {
-    flex: 0 0 58%;
+    flex: 0 0 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: auto;
 }
 
-.viz-chart iframe,
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .viz-chart img,
 .viz-chart svg,
 .viz-chart div {
-    max-width: 100%;
-    border-radius: 10px;
+    max-width: none;
+    border: none;
+}
+
+.viz-chart iframe {
+    width: 1100px;
+    max-width: none;
+    height: 540px;
+    border: none;
 }
 
 .viz-text {
@@ -197,12 +210,12 @@ h2, h3, h4 {
 }
 iframe, img {
     width: 100%;
-    max-width: 1000px;
+    max-width: none;
 }
 
 /* Text block */
 .text {
-    max-width: 900px;
+    max-width: none;
     text-align: left;
     line-height: 1.6;
     color: #ffffff;

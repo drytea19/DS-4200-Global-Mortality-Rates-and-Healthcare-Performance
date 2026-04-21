@@ -17,6 +17,13 @@
       pointer-events: none;
       opacity: 0;
     }
+
+    svg {
+      width: auto;
+      height: auto;
+      display: block;
+      background-color: white;
+    }
   </style>
 </head>
 
@@ -27,7 +34,7 @@
 <input type="range" min="2000" max="2022" step="1" value="2021" id="yearSlider">
 <p>Year: <span id="yearLabel">2021</span></p>
 
-<svg width="1000" height="1000"></svg>
+<svg></svg>
 
 <div class="tooltip"></div>
 
