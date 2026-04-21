@@ -20,7 +20,7 @@ main, .wrapper {
 h1 {
     margin: 0 0 20px 0;
     padding: 20px 0;
-    color: #472bc5;
+    color: #2c419e;
     text-align: center;
     font-size: 2.2rem;
     border-bottom: 2px solid rgba(255,255,255,0.3);
@@ -28,11 +28,129 @@ h1 {
 
 /* Subheadings */
 h2, h3, h4 {
-    color: #f38740;
+    color: #fc843f;
     margin-top: 25px;
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 5px;
+}
+
+/* Navigation bar */
+.navbar {
+    background: #3f8f77;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar > ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar > ul > li {
+    position: relative;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.navbar a:hover {
+    color: #fc843f;
+    background: rgba(255,255,255,0.08);
+}
+
+/* Dropdown menu */
+.navbar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #4a9b84;
+    min-width: 320px;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul ul li {
+    width: 100%;
+}
+
+.navbar ul ul a {
+    padding: 10px 16px;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+/* Show dropdown on hover */
+.navbar li:hover > ul {
+    display: block;
+}
+
+/* Shared visualization section */
+.viz-section {
+    margin-top: 30px;
+}
+
+.viz-intro,
+.viz-footer {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.viz-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: #4a9b84;
+    padding: 24px;
+    border-radius: 18px;
+    margin: 20px 0;
+}
+
+.viz-chart {
+    flex: 0 0 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.viz-chart iframe,
+.viz-chart img,
+.viz-chart svg,
+.viz-chart div {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.viz-text {
+    flex: 1;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.viz-text strong {
+    font-weight: 700;
 }
 
 /* Table */
@@ -65,7 +183,7 @@ h2, h3, h4 {
     background-color: #f3fbf5;
 }
 
-/* Image + text */
+/* Old image + text container */
 .container {
     align-items: center;
     display: flex;
@@ -89,7 +207,7 @@ h2, h3, h4 {
 
 /* Links */
 a {
-    color: #2f9fb6;
+    color: #438ab9;
     font-weight: 600;
 }
 
