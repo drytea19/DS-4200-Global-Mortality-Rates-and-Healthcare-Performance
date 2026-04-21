@@ -20,11 +20,28 @@
         }
     </style>
 </head>
+<nav class="navbar">
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li>
+            <a href="#visualizations">Visualizations</a>
+            <ul>
+                <li><a href="#choropleth-map">Choropleth Map</a></li>
+                <li><a href="#global-health-expenditure">Global Health Expenditure</a></li>
+                <li><a href="#resources-vs-mortality">Specific Health Resources Vs. Mortality Comparison</a></li>
+                <li><a href="#expenditures-over-time">Health Expenditures Over Time by Country</a></li>
+                <li><a href="#spending-life-expectancy">Health Care Spending and Life Expectancy Correlation</a></li>
+            </ul>
+        </li>
+        <li><a href="#summary">Summary</a></li>
+    </ul>
+</nav>
 <body>
     
-    <h1> An Analysis of Global Mortality Rates and Healthcare Performance</h1>
+    <h1>An Analysis of Global Mortality Rates and Healthcare Performance</h1>
 
-    <h3>Introduction</h3>
+
+    <h3 id="introduction">Introduction</h3>
 
     <p>The topic that is being focused on pertains to how potential healthcare gaps,
          in different countries, can be addressed. The analysis of mortality rates across
@@ -98,155 +115,156 @@
       </tr>
     </table>
 
-    <p> This choropleth map introduces the global distribution of mortality-related health outcomes across countries. 
-        By using color to represent differences between countries, the map makes regional patterns and global disparities 
-        easier to recognize. It works as a strong starting point for the project because it gives a broad geographic view 
-        of the data before the later visualizations go into more detailed comparisons. Overall, the map suggests that 
-        health outcomes are not evenly distributed across the world and may be influenced by differences in healthcare access, 
-        spending, and development.
-    </p>
+    <div id="visualizations">
+        <p id="choropleth-map">This choropleth map introduces the global distribution of mortality-related health outcomes across countries. 
+            By using color to represent differences between countries, the map makes regional patterns and global disparities 
+            easier to recognize. It works as a strong starting point for the project because it gives a broad geographic view 
+            of the data before the later visualizations go into more detailed comparisons. Overall, the map suggests that 
+            health outcomes are not evenly distributed across the world and may be influenced by differences in healthcare access, 
+            spending, and development.
+        </p>
 
-    <div class = 'center'>
-                <iframe src="choropleth_map.html" width="800px" height="400px" frameborder="0"></iframe>
-    </div>
+        <div class='center'>
+            <iframe src="choropleth_map.html" width="800px" height="400px" frameborder="0"></iframe>
+        </div>
 
-    <p>By hovering over different countries in this map, you can see the corresponding country name and level of health expenditure. The darkness of <thead>
-        country also corresponds to its amount of health expenditure (more = darker, less = lighter)
-    </thead></p>
+        <p>By hovering over different countries in this map, you can see the corresponding country name and level of health expenditure. The darkness of <thead>
+            country also corresponds to its amount of health expenditure (more = darker, less = lighter)
+        </thead></p>
 
-    <h3>Global Health Expenditure</h3>
+        <h3 id="global-health-expenditure">Global Health Expenditure</h3>
 
-    <p>The first visualization is a static line plot that compares the relationship between healthcare resources
-         and mortality rates on a global scale. The x-axis represents the year, while the y-axis represents the expenditure on healthcare per capita. 
-        Each point on the scatter plot represents a the expenditure for the year. This visualization allows us to 
-        understand patterns over time in the data.</p>
-    <div class = 'container'>
-            <img src="health_expenditure.png" width="800">
+        <p>The first visualization is a static line plot that compares the relationship between healthcare resources
+             and mortality rates on a global scale. The x-axis represents the year, while the y-axis represents the expenditure on healthcare per capita. 
+            Each point on the scatter plot represents a the expenditure for the year. This visualization allows us to 
+            understand patterns over time in the data.</p>
+        <div class='container'>
+                <img src="health_expenditure.png" width="800">
 
-    <p> This chart shows how global health expenditure changes over time. Looking at the trend as a whole, healthcare spending appears to increase across the period covered by the dataset, 
-        which suggests that many countries have invested more in healthcare over time. This matters because long-term increases in spending can help provide context for improvements in life expectancy 
-        and reductions in mortality seen in later visualizations.
-    </p>
-    <p>
-        <strong>Takeaway:</strong> Global healthcare spending generally rises over time, and that long-term growth helps explain broader improvements in health outcomes.
-    </p>
-    </div>
+        <p> This chart shows how global health expenditure changes over time. Looking at the trend as a whole, healthcare spending appears to increase across the period covered by the dataset, 
+            which suggests that many countries have invested more in healthcare over time. This matters because long-term increases in spending can help provide context for improvements in life expectancy 
+            and reductions in mortality seen in later visualizations.
+        </p>
+        <p>
+            <strong>Takeaway:</strong> Global healthcare spending generally rises over time, and that long-term growth helps explain broader improvements in health outcomes.
+        </p>
+        </div>
 
-    <h3>Specific Health Resources Vs. Mortality Comparison</h3>
+        <h3 id="resources-vs-mortality">Specific Health Resources Vs. Mortality Comparison</h3>
 
-    <p>The second visualization is an Altair scatter plot that compares the relationship between healthcare resources and 
-        mortality rates across different countries. The x-axis represents the number of healthcare physicians while the y-axis represents 
-        the mortality rate (such as infant mortality rate or overall mortality rate). 
-        Each point on the scatter plot represents a country, and the color of the points can indicate different population growth.
-        This visualization allows us to see if there is a correlation between healthcare resources and mortality rates, and to identify any 
-        outliers or trends in the data.
-    </p>
-         <div class = 'container'>
-            <iframe src="alt_scatterplot.html" width="800px" height="400px" frameborder="0"></iframe>
-            <div class = 'text'>
-                <p> This scatter plot compares healthcare resources and mortality rates across different countries. In general, countries with stronger 
-                healthcare resources tend to have lower mortality rates, although the pattern is not perfect and there are still some outliers. 
-                This suggests that healthcare access and investment are important factors in health outcomes, but they are not the only influence. 
-                Overall, the visualization helps show that differences in healthcare systems may play a major role in explaining differences in 
-                mortality between countries.
+        <p>The second visualization is an Altair scatter plot that compares the relationship between healthcare resources and 
+            mortality rates across different countries. The x-axis represents the number of healthcare physicians while the y-axis represents 
+            the mortality rate (such as infant mortality rate or overall mortality rate). 
+            Each point on the scatter plot represents a country, and the color of the points can indicate different population growth.
+            This visualization allows us to see if there is a correlation between healthcare resources and mortality rates, and to identify any 
+            outliers or trends in the data.
+        </p>
+             <div class='container'>
+                <iframe src="alt_scatterplot.html" width="800px" height="400px" frameborder="0"></iframe>
+                <div class='text'>
+                    <p> This scatter plot compares healthcare resources and mortality rates across different countries. In general, countries with stronger 
+                    healthcare resources tend to have lower mortality rates, although the pattern is not perfect and there are still some outliers. 
+                    This suggests that healthcare access and investment are important factors in health outcomes, but they are not the only influence. 
+                    Overall, the visualization helps show that differences in healthcare systems may play a major role in explaining differences in 
+                    mortality between countries.
+                    </p>
+
+                    <p>
+                        <strong>Takeaway:</strong> Countries with more healthcare resources often have lower mortality rates, but the relationship is not identical.
+                 </p>
+                </div>
+            </div>
+
+        <p><strong>How to interact: </strong> Hover over each point to view country level details and compare countries that fall above or below the overall trend
+        </p>
+
+        <h3 id="expenditures-over-time">Health Expenditures Over Time by Country</h3>
+
+        <p>The third visualization is a line chart that shows the trend of health expenditures over time for different countries. 
+            The x-axis represents the years, while the y-axis represents the amount of health expenditure. 
+            This visualization allows us to see how health expenditures have changed over time across different 
+            countries, and to identify any patterns or trends in the data.
+        </p>
+
+            <div class='container'>
+                <iframe src="new_health_plot.html" width="800px" height="400px" frameborder="0"></iframe>
+                <div class='text'>
+                <p> This line chart shows how health expenditures change over time for different countries. It makes it easier to compare 
+                    long-term spending trends and see which countries steadily increased healthcare investment versus which stayed more stable over time. 
+                    Looking at the data this way is useful because it shows that countries do not all follow the same path, and those differences in 
+                    spending patterns may help explain differences in healthcare performance and mortality outcomes. Overall, the chart highlights how long-term 
+                    investment in healthcare can vary widely across countries.
                 </p>
-
                 <p>
-                    <strong>Takeaway:</strong> Countries with more healthcare resources often have lower mortality rates, but the relationship is not identical.
-             </p>
+                    <strong>Takeaway:</strong> Health spending changes over time, and long term differences between countries help explain broader differences in health outcomes.
+                </p>
+                </div>
             </div>
-        </div>
-
-    <p><strong>How to interact: </strong> Hover over each point to view country level details and compare countries that fall above or below the overall trend
-    </p>
-    <h3>Health Expenditures Over Time by Country</h3>
-
-    <p>The third visualization is a line chart that shows the trend of health expenditures over time for different countries. 
-        The x-axis represents the years, while the y-axis represents the amount of health expenditure. 
-        This visualization allows us to see how health expenditures have changed over time across different 
-        countries, and to identify any patterns or trends in the data.
-    </p>
-
-        <div class = 'container'>
-            <iframe src="new_health_plot.html" width="800px" height="400px" frameborder="0"></iframe>
-            <div class = 'text'>
-            <p> This line chart shows how health expenditures change over time for different countries. It makes it easier to compare 
-                long-term spending trends and see which countries steadily increased healthcare investment versus which stayed more stable over time. 
-                Looking at the data this way is useful because it shows that countries do not all follow the same path, and those differences in 
-                spending patterns may help explain differences in healthcare performance and mortality outcomes. Overall, the chart highlights how long-term 
-                investment in healthcare can vary widely across countries.
-            </p>
-            <p>
-                <strong>Takeaway:</strong> Health spending changes over time, and long term differences between countries help explain broader differences in health outcomes.
-            </p>
-            </div>
-        </div>
-    <p> 
-        <strong>How to interact:</strong> Hover over the lines to compare countries and trace how healthcare spending changes across years. 
-    </p>
+        <p> 
+            <strong>How to interact:</strong> Hover over the lines to compare countries and trace how healthcare spending changes across years. 
+        </p>
+            
         
-    
-    <h3>Health Care Spending and Life Expectancy Correlation</h3>
+        <h3 id="spending-life-expectancy">Health Care Spending and Life Expectancy Correlation</h3>
 
-    <p>The fourth visualization is a D3 scatter plot that explores the correlation between healthcare spending and life expectancy across 
-        different countries. The x-axis represents healthcare spending per capita, while the y-axis represents life expectancy at birth.
-         Each point on the scatter plot represents a country, and the size of the points can indicate population size or another relevant 
-         metric. This visualization allows us to examine whether higher healthcare spending is associated with longer life 
-         expectancy, and to identify any outliers or patterns in the data.
-    </p>
+        <p>The fourth visualization is a D3 scatter plot that explores the correlation between healthcare spending and life expectancy across 
+            different countries. The x-axis represents healthcare spending per capita, while the y-axis represents life expectancy at birth.
+             Each point on the scatter plot represents a country, and the size of the points can indicate population size or another relevant 
+             metric. This visualization allows us to examine whether higher healthcare spending is associated with longer life 
+             expectancy, and to identify any outliers or patterns in the data.
+        </p>
 
-        <div class = 'container'>
-            <div class = 'image'>
-                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
-                <iframe src="scatter.html" width="800px" height="400px" frameborder="0"></iframe>
+            <div class='container'>
+                <div class='image'>
+                    <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
+                    <iframe src="scatter.html" width="800px" height="400px" frameborder="0"></iframe>
+                </div>
+                <div class='text'>
+                    <p> This scatter plot shows the relationship between healthcare spending per capita and life expectancy across countries. 
+                        In general, countries that spend more on healthcare tend to have higher life expectancy, but the trend is not perfectly linear. 
+                        Some countries spend much more without seeing equally large gains in life expectancy, which suggests that spending alone does not 
+                        fully explain better health outcomes. Overall, the visualization shows that healthcare spending matters, but it works alongside other 
+                        factors such as infrastructure, policy, and broader living conditions.
+                    </p>
+                    <p>
+                        <strong>Takeaway:</strong> Higher healthcare spending is generally linked to longer life expectancy, but spending alone does not fully explain global health differences.
+                    </p>
+                </div>            
             </div>
-            <div class = 'text'>
-                <p> This scatter plot shows the relationship between healthcare spending per capita and life expectancy across countries. 
-                    In general, countries that spend more on healthcare tend to have higher life expectancy, but the trend is not perfectly linear. 
-                    Some countries spend much more without seeing equally large gains in life expectancy, which suggests that spending alone does not 
-                    fully explain better health outcomes. Overall, the visualization shows that healthcare spending matters, but it works alongside other 
-                    factors such as infrastructure, policy, and broader living conditions.
-                </p>
-                <p>
-                    <strong>Takeaway:</strong> Higher healthcare spending is generally linked to longer life expectancy, but spending alone does not fully explain global health differences.
-                </p>
-            </div>            
-        </div>
 
-    <p><strong>How to interact: </strong>By hovering over each point in this visual, you can see the corresponding country but also the amount of health expenditure spending and 
-        life expectancy. There is a slider for the year that can be adjusted too so that you can see how spending/ life expectancy has changed throughout
-        time.
+        <p><strong>How to interact: </strong>By hovering over each point in this visual, you can see the corresponding country but also the amount of health expenditure spending and 
+            life expectancy. There is a slider for the year that can be adjusted too so that you can see how spending/ life expectancy has changed throughout
+            time.
+        </p>
+    </div>
+
+    <h3 id="summary">Summary and additional work</h3>
+
+    <p> Overall, this project shows that global mortality rates and healthcare performance are shaped by clear differences in healthcare access, healthcare spending, 
+        and long-term investment across countries. Looking across all of the visualizations together, a general pattern appears. Countries with greater healthcare resources and higher healthcare 
+        spending often have better health outcomes, including lower mortality rates and higher life expectancy. At the same time, these relationships are not perfectly consistent, 
+        which suggests that healthcare performance cannot be explained by one variable alone. Some countries may spend large amounts on healthcare but still not achieve equally strong outcomes, 
+        while others may perform better than expected based on spending alone. This shows that mortality and life expectancy are influenced not only by funding, but also by how effectively 
+        healthcare systems operate and how resources are distributed.
     </p>
 
+    <p> The project also highlights the importance of comparing countries from multiple perspectives rather than relying on a single chart or indicator. The choropleth map makes regional disparities 
+        visible at a global level, while the scatter plots help show correlations between healthcare investment, resources, and outcomes. The line chart adds another layer by showing that healthcare 
+        spending is not static, but instead changes over time in ways that may reflect shifts in policy, economic development, or public health priorities. Taken together, these visualizations suggest 
+        that stronger healthcare systems are generally associated with better outcomes, but they also reveal that global health differences are complex and shaped by multiple overlapping factors.
+    </p>
 
-        <h3>Summary and additional work</h3>
+    <p> One limitation of this project is that country level data can hide important variation within countries, such as regional inequalities, urban/rural differences, or differences across income groups. 
+        In addition, the dataset only extends through 2023, so the analysis may not fully reflect the most recent global health developments. Another limitation is that while the visualizations show relationships 
+        between variables, they do not prove direct causation. For example, higher healthcare spending may be associated with longer life expectancy, but that does not necessarily mean spending alone causes those improvements. 
+        Other social determinants, such as education, sanitation, nutrition, and political stability, may also play major roles.
+    </p>
 
-        <p> Overall, this project shows that global mortality rates and healthcare performance are shaped by clear differences in healthcare access, healthcare spending, 
-            and long-term investment across countries. Looking across all of the visualizations together, a general pattern appears. Countries with greater healthcare resources and higher healthcare 
-            spending often have better health outcomes, including lower mortality rates and higher life expectancy. At the same time, these relationships are not perfectly consistent, 
-            which suggests that healthcare performance cannot be explained by one variable alone. Some countries may spend large amounts on healthcare but still not achieve equally strong outcomes, 
-            while others may perform better than expected based on spending alone. This shows that mortality and life expectancy are influenced not only by funding, but also by how effectively 
-            healthcare systems operate and how resources are distributed.
-        </p>
-
-        <p> The project also highlights the importance of comparing countries from multiple perspectives rather than relying on a single chart or indicator. The choropleth map makes regional disparities 
-            visible at a global level, while the scatter plots help show correlations between healthcare investment, resources, and outcomes. The line chart adds another layer by showing that healthcare 
-            spending is not static, but instead changes over time in ways that may reflect shifts in policy, economic development, or public health priorities. Taken together, these visualizations suggest 
-            that stronger healthcare systems are generally associated with better outcomes, but they also reveal that global health differences are complex and shaped by multiple overlapping factors.
-        </p>
-
-        <p> One limitation of this project is that country level data can hide important variation within countries, such as regional inequalities, urban/rural differences, or differences across income groups. 
-            In addition, the dataset only extends through 2023, so the analysis may not fully reflect the most recent global health developments. Another limitation is that while the visualizations show relationships 
-            between variables, they do not prove direct causation. For example, higher healthcare spending may be associated with longer life expectancy, but that does not necessarily mean spending alone causes those improvements. 
-            Other social determinants, such as education, sanitation, nutrition, and political stability, may also play major roles.
-        </p>
-
-        <p> For future work, this project could be expanded by including more recent data and by adding variables that reflect the broader conditions that shape public health. Examples include physician availability, hospital access, 
-            sanitation, vaccination coverage, and education levels. It could also be useful to group countries by income level or region to better understand whether the same patterns hold across different parts of the world. 
-            A deeper follow-up analysis could focus on identifying countries that perform better or worse than expected and examining what policies or structural conditions may explain those differences. This would help build a 
-            more complete understanding of why health outcomes vary globally and what kinds of improvements may have the greatest long-term impact.
-        </p>
-
+    <p> For future work, this project could be expanded by including more recent data and by adding variables that reflect the broader conditions that shape public health. Examples include physician availability, hospital access, 
+        sanitation, vaccination coverage, and education levels. It could also be useful to group countries by income level or region to better understand whether the same patterns hold across different parts of the world. 
+        A deeper follow-up analysis could focus on identifying countries that perform better or worse than expected and examining what policies or structural conditions may explain those differences. This would help build a 
+        more complete understanding of why health outcomes vary globally and what kinds of improvements may have the greatest long-term impact.
+    </p>
 
 </body>
 </html>
